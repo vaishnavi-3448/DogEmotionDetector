@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dog Analysis</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🐶 Analysis Complete</h1>
+
+    <img src="/{{ image_path }}"
+         width="300">
+
+    <h2>{{ emotion }}</h2>
+
+    <h3>{{ confidence }}% Confidence</h3>
+
+    <div class="speech">
+        💭 "{{ translation }}"
+    </div>
+
+    <div class="card">
+        🐾 Paw Score:
+        {{ paw_score }}/100
+    </div>
+
+    <div class="card">
+        🍖 Treat Probability:
+        {{ treat_probability }}%
+    </div>
+
+    <br>
+
+    <a href="/">
+        Analyze Another Dog
+    </a>
+
+</div>
+
+</body>
+</html>

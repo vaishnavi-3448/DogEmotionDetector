@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PawMood AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🐶 PawMood AI</h1>
+
+    <p>
+        Upload your dog's photo and discover
+        what they're really thinking!
+    </p>
+
+    <form action="/predict"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <input type="file"
+               name="image"
+               required>
+
+        <br><br>
+
+        <button type="submit">
+            Analyze My Dog
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
